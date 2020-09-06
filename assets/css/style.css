@@ -32,14 +32,10 @@ html, body {
       -ms-transform: translateY(-70px);
           transform: translateY(-70px); }
 
-.Прямоугольник__скругл__углы_763 {
-  background-image: -webkit-linear-gradient(90deg, #00b879 0%, #00df6d 99.536%);
-  position: absolute;
-  left: 1393px;
-  top: 32px;
-  width: 137px;
-  height: 39px;
-  z-index: 379; }
+#about {
+  -webkit-transform: translateY(-90px);
+      -ms-transform: translateY(-90px);
+          transform: translateY(-90px); }
 
 .btn-custom-header button {
   position: relative;
@@ -786,7 +782,13 @@ header.sticky {
     height: 190px;
     width: 100%;
     margin-bottom: 30px;
-    background: #ffffff; }
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    -webkit-transition: 300ms all;
+    -o-transition: 300ms all;
+    transition: 300ms all;
+    overflow: hidden;
+    cursor: pointer; }
     .ln-about_item__text {
       display: -webkit-box;
       display: -webkit-flex;
@@ -819,7 +821,18 @@ header.sticky {
         height: 100%;
         background-position: right center;
         background-repeat: no-repeat;
-        background-size: contain; }
+        background-size: contain;
+        -webkit-transition: 300ms all;
+        -o-transition: 300ms all;
+        transition: 300ms all; }
+    .ln-about_item:hover {
+      -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);
+              box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);
+      border-color: #6ebb51; }
+      .ln-about_item:hover .image {
+        -webkit-transform: translateX(20px);
+            -ms-transform: translateX(20px);
+                transform: translateX(20px); }
 
 .ac-timeform {
   margin-top: 50px;
@@ -1594,10 +1607,10 @@ header.sticky {
     .service-modal-container__item h3 {
       font-size: 32px;
       line-height: 32px;
-      font-family: 'Circe-700';
+      font-family: "Circe-700";
       margin-bottom: 30px; }
     .service-modal-container__item h6 {
-      font-family: 'Circe-700';
+      font-family: "Circe-700";
       font-size: 18px;
       line-height: 18px;
       text-align: center;
@@ -1609,11 +1622,11 @@ header.sticky {
         width: 100%;
         height: 40px;
         margin-bottom: 20px;
-        padding: 0px 25px;
+        padding: 0px 15px;
         font-size: 12x;
         line-height: 12px;
-        text-align: left;
-        border-radius: 4px;
+        font-family: "Circe-700";
+        text-align: center;
         border: 1px solid #6ebb51;
         background: #fff;
         color: #000000;
@@ -1644,21 +1657,31 @@ header.sticky {
         width: 100%; }
         .service-modal-container__item form .btn-custom button {
           background: #6ebb51;
+          border: 2px solid #6ebb51;
           position: relative;
           z-index: 1;
           width: 100%;
-          height: 43px; }
-          .service-modal-container__item form .btn-custom button b {
+          height: 40px;
+          -webkit-transition: 300ms all;
+          -o-transition: 300ms all;
+          transition: 300ms all; }
+          .service-modal-container__item form .btn-custom button span {
+            display: block;
             font-size: 12px;
-            text-transform: uppercase;
-            font-family: 'Circe-700'; }
-    .service-modal-container__item span {
+            line-height: 28px;
+            font-family: "Circe-700";
+            color: #fff; }
+          .service-modal-container__item form .btn-custom button:hover {
+            background: none; }
+            .service-modal-container__item form .btn-custom button:hover span {
+              color: #6ebb51; }
+    .service-modal-container__item > span {
       max-width: 380px;
       margin-top: 20px;
       text-align: center;
       font-size: 12px;
       line-height: 12px;
-      font-family: 'Circe-300'; }
+      font-family: "Circe-300"; }
 
 .modal-header {
   height: 50px;
@@ -1666,7 +1689,7 @@ header.sticky {
 
 .modal-body {
   padding-top: 0px !important;
-  padding-bottom: 30px !important; }
+  padding-bottom: 60px !important; }
 
 .modal-dialog {
   max-width: 760px !important; }
@@ -2875,9 +2898,24 @@ button.swiper-pagination-bullet {
         text-decoration: none; }
 
 @media screen and (min-width: 1200px) {
-  .ac-main-banner_image .image {
-    height: 380px;
-    width: 100%; } }
+  .ac-main-banner_image {
+    padding-right: 80px !important; }
+    .ac-main-banner_image .image {
+      height: 380px;
+      width: 100%; }
+  .ac-timeform {
+    position: relative; }
+    .ac-timeform:after {
+      content: '';
+      position: absolute;
+      top: 280px;
+      left: -350px;
+      width: 300px;
+      height: 280px;
+      background-image: url(../img/elem.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; } }
 
 @media screen and (min-width: 992px) {
   header.sticky .ac-header_logo {
@@ -2918,20 +2956,16 @@ button.swiper-pagination-bullet {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
       -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
               justify-content: flex-end;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      height: 100%; }
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      height: 100%;
+      padding-right: 40px; }
       .ac-main-banner_image .image {
         height: 365px;
         width: 420px;
@@ -3078,19 +3112,6 @@ button.swiper-pagination-bullet {
       background-position: center;
       background-repeat: no-repeat;
       background-image: url(../img/service-el-2.png); }
-  .ac-review-el {
-    position: relative; }
-    .ac-review-el::after {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      top: 195px;
-      left: -100px;
-      width: 282px;
-      height: 282px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: url(../img/review-el.png); }
   .ac-timer {
     background-image: url(../img/timer-bg.png);
     background-position: center;
@@ -3266,6 +3287,8 @@ button.swiper-pagination-bullet {
     .electro-footer_menu a {
       padding: 0;
       margin-bottom: 15px; }
+      .electro-footer_menu a:last-child {
+        margin-bottom: 0 !important; }
   .electro-footer .links span {
     text-align: center; } }
 
@@ -3529,6 +3552,8 @@ button.swiper-pagination-bullet {
     width: 100% !important; }
   .modal-header {
     height: 30px !important; }
+  .modal-body {
+    padding-bottom: 30px !important; }
   .service-modal-container__item h3 {
     font-size: 25px;
     line-height: 25px;
@@ -3754,4 +3779,13 @@ button.swiper-pagination-bullet {
     border-left: 1px solid #fff;
     -webkit-transform: rotate(-45deg) translateY(3px) translateX(2px);
         -ms-transform: rotate(-45deg) translateY(3px) translateX(2px);
-            transform: rotate(-45deg) translateY(3px) translateX(2px); } }
+            transform: rotate(-45deg) translateY(3px) translateX(2px); }
+  .ln-about_item__text {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0;
+        -ms-flex: 0 0;
+            flex: 0 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; } }
