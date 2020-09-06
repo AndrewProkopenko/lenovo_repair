@@ -3263,8 +3263,6 @@ button.swiper-pagination-bullet {
       width: 500px; }
       .ln-contact_item .tel {
         margin: 10px 0; }
-  .map {
-    border-radius: 0; }
   .electro-footer-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3716,6 +3714,18 @@ button.swiper-pagination-bullet {
     .ac-review .swiper-header .swiper-pagination {
       padding: 0; }
       .ac-review .swiper-header .swiper-pagination-bullet {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin: 0 3px;
         font-size: 10px;
         line-height: 10px; }
@@ -3747,21 +3757,13 @@ button.swiper-pagination-bullet {
       text-align: center; }
     .ln-contact_item form textarea {
       text-align: center;
-      width: 100%; }
-  .swiper-container {
-    max-width: 350px; } }
+      width: 100%; } }
 
 @media screen and (max-width: 420px) {
   .ac-main-banner_content h1 {
     font-size: 25px;
     line-height: 23px;
-    margin-bottom: 10px; }
-  .swiper-container {
-    max-width: 300px; } }
-
-@media screen and (max-width: 350px) {
-  .swiper-container {
-    max-width: 260px; } }
+    margin-bottom: 10px; } }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .ac-review .swiper-header .swiper-button-next::after {
