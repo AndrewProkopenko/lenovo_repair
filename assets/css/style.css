@@ -126,6 +126,9 @@ html, body {
 button:focus, a:focus {
   outline: none !important; }
 
+.swiper-pagination-bullet:focus {
+  outline: none; }
+
 button:active {
   outline: none; }
 
@@ -3149,8 +3152,6 @@ button.swiper-pagination-bullet {
     padding: 30px 15px; } }
 
 @media screen and (max-width: 992px) {
-  body {
-    overflow-x: hidden; }
   .ac-header .navbar {
     padding-top: 15px;
     padding-bottom: 15px; }
@@ -3201,30 +3202,28 @@ button.swiper-pagination-bullet {
   .ln-tabs_content__item {
     padding: 20px;
     height: 200px; }
-  .wr-service {
-    overflow-x: hidden; }
-    .wr-service_circle {
-      margin-top: 50px;
-      background: none;
-      height: auto; }
-      .wr-service_circle::after {
-        left: -20px;
-        top: -20px;
-        width: 480px;
-        height: 480px; }
-      .wr-service_circle__btn {
-        width: 100%;
-        left: 0; }
-      .wr-service_circle button {
-        background: #84b818;
-        margin: 2%;
-        width: 46%; }
-        .wr-service_circle button .title {
-          color: #fff; }
-        .wr-service_circle button .price {
-          color: #fff; }
-        .wr-service_circle button::before, .wr-service_circle button::after {
-          display: none; }
+  .wr-service_circle {
+    margin-top: 50px;
+    background: none;
+    height: auto; }
+    .wr-service_circle::after {
+      left: -20px;
+      top: -20px;
+      width: 480px;
+      height: 480px; }
+    .wr-service_circle__btn {
+      width: 100%;
+      left: 0; }
+    .wr-service_circle button {
+      background: #84b818;
+      margin: 2%;
+      width: 46%; }
+      .wr-service_circle button .title {
+        color: #fff; }
+      .wr-service_circle button .price {
+        color: #fff; }
+      .wr-service_circle button::before, .wr-service_circle button::after {
+        display: none; }
   .ac-timeform_content {
     padding: 50px; }
   .ac-stage_item-content .title span.line-lg {
@@ -3361,7 +3360,7 @@ button.swiper-pagination-bullet {
       margin-bottom: 20px;
       height: 150px; }
       .ln-about_item__image {
-        min-width: 120px; }
+        min-width: 125px; }
   .wr-service {
     margin-top: 50px; }
     .wr-service-button {
@@ -3507,13 +3506,22 @@ button.swiper-pagination-bullet {
   .ln-contact {
     margin-top: 30px; }
     .ln-contact_item {
-      width: 100%; }
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0; }
+      .ln-contact_item form {
+        margin-left: auto;
+        margin-right: auto; }
+        .ln-contact_item form p {
+          text-align: center;
+          margin-bottom: 10px; }
     .ln-contact .tel {
       -webkit-box-pack: center;
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center;
-      margin-bottom: 10px; }
+      margin-bottom: 20px;
+      margin-top: 0; }
       .ln-contact .tel span {
         text-align: center; }
     .ln-contact .loc {
@@ -3706,11 +3714,7 @@ button.swiper-pagination-bullet {
   .ac-review .swiper-header {
     margin-bottom: 20px; }
     .ac-review .swiper-header .swiper-button-prev, .ac-review .swiper-header .swiper-button-next {
-      width: 20px;
-      height: 20px;
-      min-width: 20px; }
-      .ac-review .swiper-header .swiper-button-prev::after, .ac-review .swiper-header .swiper-button-next::after {
-        font-size: 10px; }
+      display: none; }
     .ac-review .swiper-header .swiper-pagination {
       padding: 0; }
       .ac-review .swiper-header .swiper-pagination-bullet {
@@ -3760,6 +3764,8 @@ button.swiper-pagination-bullet {
       width: 100%; } }
 
 @media screen and (max-width: 420px) {
+  body {
+    overflow-x: hidden; }
   .ac-main-banner_content h1 {
     font-size: 25px;
     line-height: 23px;
